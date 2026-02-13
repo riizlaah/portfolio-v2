@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Stack - Portfolio Saya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <!-- Navbar -->
+    <nav class="bg-gray-800/50 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Portfolio</a>
+                <div class="flex space-x-6">
+                    <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+                    <a href="techstack.html" class="text-blue-400 font-semibold border-b-2 border-blue-400 pb-1">Tech Stack</a>
+                    <a href="projects.html" class="hover:text-blue-400 transition">Projects</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Tech Stack</h1>
+            <p class="text-center text-gray-400 mb-12 text-lg">Teknologi yang saya kuasai dan lama pengalaman menggunakannya</p>
+
+            <!-- Tech Stack Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="techStackContainer">
+                <!-- Tech stack items akan diisi oleh JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Data tech stack dengan format [nama, icon class, tahun_mulai, bulan_mulai]
+        const techStacks = [
+            { name: 'PHP', icon: 'php', year: 2022, month: 7 }, // Paling mahir
+            { name: 'JavaScript', icon: 'js', year: 2022, month: 11 },
+            { name: 'MySQL & MariaDB', icon: 'database', year: 2022, month: 12 },
+            { name: 'Laravel', icon: 'laravel', year: 2023, month: 2 },
+            { name: 'Godot & GDScript', icon: 'godot', year: 2023, month: 8 },
+            { name: 'Python', icon: 'python', year: 2023, month: 6 },
+            { name: 'Linux', icon: 'linux', year: 2024, month: 1 },
+            { name: 'C#', icon: 'c-sharp', year: 2026, month: 1 },
+            { name: 'WinForms & Entity Framework', icon: 'dotnet', year: 2026, month: 1 },
+            { name: 'Kotlin & Jetpack Compose', icon: 'android', year: 2026, month: 1 },
+            { name: 'Blender', icon: 'blender', year: 2024, month: 2 },
+            { name: 'GIMP', icon: 'gimp', year: 2024, month: 4 },
+            { name: 'Audacity', icon: 'audacity', year: 2024, month: 7 },
+            { name: 'Aseprite', icon: 'aseprite', year: 2025, month: 7 },
+        ];
+
+        function calculateExperience(startYear, startMonth) {
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const currentMonth = currentDate.getMonth() + 1; // JavaScript months are 0-indexed
+            
+            let years = currentYear - startYear;
+            let months = currentMonth - startMonth;
+            
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+            
+            return { years, months };
+        }
+
+        function formatExperience(years, months) {
+            if (years === 0) {
+                return `${months} bulan`;
+            } else if (months === 0) {
+                return `${years} tahun`;
+            } else {
+                return `${years} tahun ${months} bulan`;
+            }
+        }
+
+        function getProficiencyColor(index) {
+            const colors = [
+                'from-green-500 to-green-600', // Paling mahir
+                'from-green-500 to-green-600',
+                'from-green-500 to-green-600',
+                'from-green-500 to-green-600',
+                'from-blue-500 to-blue-600',
+                'from-blue-500 to-blue-600',
+                'from-blue-500 to-blue-600',
+                'from-yellow-500 to-yellow-600',
+                'from-yellow-500 to-yellow-600',
+                'from-yellow-500 to-yellow-600',
+                'from-orange-500 to-orange-600'
+            ];
+            return colors[index] || 'from-gray-500 to-gray-600';
+        }
+
+        function renderTechStacks() {
+            const container = document.getElementById('techStackContainer');
+            
+            techStacks.forEach((tech, index) => {
+                const experience = calculateExperience(tech.year, tech.month);
+                const experienceText = formatExperience(experience.years, experience.months);
+                const gradientColor = getProficiencyColor(index);
+                
+                const card = `
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-400/50 transition-all group">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <img src="assets/icons/${tech.icon}.png" alt="${tech.icon}" width="32" />
+                            
+                            <div>
+                                <h3 class="text-xl font-semibold">${tech.name}</h3>
+                                <p class="text-gray-400 text-sm">Mulai ${tech.month}/${tech.year}</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-300">Pengalaman:</span>
+                                <span class="text-blue-400 font-semibold">${experienceText}</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r ${gradientColor} h-2 rounded-full" style="width: ${Math.min(100, (techStacks.length - (index)) * (100.0 / techStacks.length))}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                container.innerHTML += card;
+            });
+        }
+
+        // Render tech stacks saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', renderTechStacks);
+    </script>
+</body>
+</html>

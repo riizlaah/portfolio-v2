@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+  <!-- Navbar -->
+  <nav class="bg-gray-800/50 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
+      <div class="container mx-auto px-4 py-4">
+          <div class="flex justify-between items-center">
+              <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Portfolio</a>
+              <div class="flex space-x-6">
+                  <a href="index.html" class="text-blue-400 font-semibold border-b-2 border-blue-400 pb-1">Home</a>
+                  <a href="techstack.html" class="hover:text-blue-400 transition">Tech Stack</a>
+                  <a href="projects.html" class="hover:text-blue-400 transition">Projects</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
+      <div class="max-w-5xl mx-auto">
+          <!-- Profile Section -->
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 shadow-xl">
+              <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                  <!-- Foto Profile -->
+                  <div class="w-64 h-64 rounded-2xl overflow-hidden border-4 border-blue-400/30 shadow-2xl">
+                      <img src="assets/me.jpg" alt="Profile Photo" class="w-full h-full object-cover">
+                  </div>
+
+                  <!-- Deskripsi Profil -->
+                  <div class="flex-1">
+                      <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Naf'an Rizkilah</h1>
+                      <p class="text-xl text-gray-300 mb-4">Full Stack Developer & Game Developer</p>
+                      
+                      <div class="space-y-4 text-gray-300">
+                          <p class="leading-relaxed">
+                              Saya adalah seorang pengembang perangkat lunak dengan pengalaman lebih dari 2 tahun dalam pengembangan web dan game. Memiliki passion dalam menciptakan solusi teknologi yang inovatif dan user-friendly. Saat ini fokus pada pengembangan menggunakan Laravel, dan Godot Engine.
+                          </p>
+                          <p class="leading-relaxed">
+                              Saya percaya bahwa teknologi harus dapat diakses oleh semua orang dan terus belajar untuk mengikuti perkembangan terbaru di dunia programming. Dengan latar belakang yang kuat dalam berbagai bahasa pemrograman, saya selalu siap menghadapi tantangan baru.
+                          </p>
+                      </div>
+
+                      <!-- Kontak -->
+                      <div class="mt-6">
+                          <h2 class="text-2xl font-semibold mb-4 text-blue-400">Kontak Saya</h2>
+                          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg">
+                                  <i class="fas fa-envelope text-blue-400 text-xl"></i>
+                                  <span>nafan.rizkilah@gmail.com</span>
+                              </div>
+                              <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg">
+                                  <i class="fas fa-phone text-blue-400 text-xl"></i>
+                                  <span>+62 813 3197 6307</span>
+                              </div>
+                              <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg">
+                                  <i class="fab fa-github text-blue-400 text-xl"></i>
+                                  <a href="https://github.com/riizlaah" class="hover:text-blue-400 transition">github.com/riizlaah</a>
+                              </div>
+                              <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg">
+                                  <i class="fab fa-facebook text-blue-400 text-xl"></i>
+                                  <a href="https://web.facebook.com/nafan.rizkilah" class="hover:text-blue-400 transition">facebook.com/nafan.rizkilah</a>
+                              </div>
+                              <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg md:col-span-2">
+                                  <i class="fab fa-instagram text-blue-400 text-xl"></i>
+                                  <a href="https://www.instagram.com/nafanrizkilah/" class="hover:text-blue-400 transition">instagram.com/nafanrizkilah</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                  <i class="fas fa-code text-3xl text-blue-400 mb-2"></i>
+                  <h3 class="text-2xl font-bold">2+</h3>
+                  <p class="text-gray-400">Tahun Pengalaman</p>
+              </div>
+              <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                  <i class="fas fa-project-diagram text-3xl text-purple-400 mb-2"></i>
+                  <h3 class="text-2xl font-bold">7+</h3>
+                  <p class="text-gray-400">Project Selesai</p>
+              </div>
+          </div>
+      </div>
+  </main>
+</body>
+</html>

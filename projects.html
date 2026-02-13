@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio Saya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <!-- Navbar -->
+    <nav class="bg-gray-800/50 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Portfolio</a>
+                <div class="flex space-x-6">
+                    <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+                    <a href="techstack.html" class="hover:text-blue-400 transition">Tech Stack</a>
+                    <a href="projects.html" class="text-blue-400 font-semibold border-b-2 border-blue-400 pb-1">Projects</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">My Projects</h1>
+            <p class="text-center text-gray-400 mb-12 text-lg">Kumpulan project yang telah saya kerjakan</p>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button class="filter-btn active px-4 py-2 rounded-full bg-blue-600 text-white" data-filter="all">Semua</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="web">Web</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="game">Game</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="mobile">Mobile</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="desktop">Desktop</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsContainer">
+                <!-- Projects akan diisi oleh JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Data projects
+        const projects = [
+            {
+                title: "Hekerd",
+                description: "Web untuk blogging dan kuis sederhana.",
+                image: "hekerd.png",
+                category: "web",
+                techIcons: ["php", "laravel", "js", "database"],
+                projectLink: "https://hekerd.eu.org",
+                repoLink: null
+            },
+            {
+                title: "Loquas",
+                description: "Game shooter yang unik dengan fitur yang cukup banyak.",
+                image: "loquas.png",
+                category: "game",
+                techIcons: ["godot", "blender", "gimp", "audacity"],
+                projectLink: "https://riizlaah.itch.io/loquas",
+                repoLink: null
+            },
+            {
+                title: "Kuarkers",
+                description: "Game absurd tanpa tujuan dan hampir open world.",
+                image: "kuarkers.png",
+                category: "game",
+                techIcons: ["godot", "blender", "gimp", "audacity"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/kuarkers-g"
+            },
+            {
+                title: "Infiroad",
+                description: "Game racing 2d tanpa garis finish dengan gaya pixel.",
+                image: "infiroad.png",
+                category: "game",
+                techIcons: ["godot", "aseprite"],
+                projectLink: "https://riizlaah.itch.io/infiroad",
+                repoLink: null
+            },
+            {
+                title: "Masked Work",
+                description: "Game tentang cerita seorang budak di perusahaan gelap.",
+                image: "masked-work.png",
+                category: "game",
+                techIcons: ["godot", "aseprite"],
+                projectLink: "https://riizlaah.itch.io/masked-work",
+                repoLink: "https://github.com/riizlaah/masked-work"
+            },
+            {
+                title: "MonggoDB",
+                description: "Database berbasis file-file JSON, plesetan dari MongoDB.",
+                image: "monggodb.png",
+                category: "other",
+                techIcons: ["python"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/monggodb"
+            },
+            {
+                title: "Bank Sederhana",
+                description: "Aplikasi Bank Sederhana dengan tampilan CLI.",
+                image: "bank-sederhana.png",
+                category: "other",
+                techIcons: ["python"],
+                projectLink: "https://gist.github.com/riizlaah/dc1d6c0547038cce3f787df02f4ce721",
+                repoLink: null
+            },
+            {
+                title: "Ngetik Aja Dulu",
+                description: "Aplikasi (game) kecil untuk melatih kecepatan mengetik.",
+                image: "ngetik-aja-dulu.png",
+                category: "web",
+                techIcons: ["js"],
+                projectLink: "https://github.com/riizlaah/ngetik-aja-dulu",
+                repoLink: "https://ngetik-aja-dulu.pages.dev/"
+            },
+        ];
+
+        function renderProjects(filter = 'all') {
+            const container = document.getElementById('projectsContainer');
+            container.innerHTML = '';
+            
+            const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+            
+            filteredProjects.forEach(project => {
+                const card = `
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-blue-400/50 transition-all group">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/thumbnails/${project.image}" alt="${project.title}" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+                            <div class="absolute top-3 right-3 bg-gray-900/80 px-3 py-1 rounded-full text-xs font-semibold">
+                                ${project.category.charAt(0).toUpperCase() + project.category.slice(1)}
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">${project.title}</h3>
+                            <p class="text-gray-400 mb-4 text-sm leading-relaxed">${project.description}</p>
+                            
+                            <!-- Tech Icons -->
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                ${project.techIcons.map(icon => 
+                                    `<img src="assets/icons/${icon}.png" class="h-6" />`
+                                ).join('')}
+                            </div>
+                            
+                            <!-- Buttons -->
+                            <div class="flex gap-3">
+                                ${project.projectLink ? 
+                                    `<a href="${project.projectLink}" target="_blank" class="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-semibold text-center transition flex items-center justify-center gap-2">
+                                        <i class="fas fa-external-link-alt"></i> Demo
+                                    </a>` : 
+                                    `<button disabled class="flex-1 px-4 py-2 bg-gray-700 rounded-lg text-sm font-semibold text-gray-400 cursor-not-allowed flex items-center justify-center gap-2">
+                                        <i class="fas fa-external-link-alt"></i> No Demo
+                                    </button>`
+                                }
+                                ${project.repoLink ? 
+                                    `<a href="${project.repoLink}" target="_blank" class="flex-1 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-semibold text-center transition flex items-center justify-center gap-2">
+                                        <i class="fab fa-github"></i> Repo
+                                    </a>` : 
+                                    `<button disabled class="flex-1 px-4 py-2 bg-gray-700 rounded-lg text-sm font-semibold text-gray-400 cursor-not-allowed flex items-center justify-center gap-2">
+                                        <i class="fab fa-github"></i> No Repo
+                                    </button>`
+                                }
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                container.innerHTML += card;
+            });
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-blue-600', 'text-white');
+                    b.classList.add('bg-gray-700');
+                });
+                btn.classList.remove('bg-gray-700');
+                btn.classList.add('active', 'bg-blue-600', 'text-white');
+                
+                // Filter projects
+                const filter = btn.dataset.filter;
+                renderProjects(filter);
+            });
+        });
+
+        // Initial render
+        document.addEventListener('DOMContentLoaded', () => renderProjects('all'));
+    </script>
+
+    <style>
+        .filter-btn.active {
+            @apply bg-blue-600 text-white;
+        }
+    </style>
+</body>
+</html>
