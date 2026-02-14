@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Portfolio Saya</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
@@ -13,7 +13,7 @@
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Portfolio</a>
-                <div class="flex space-x-6">
+                <div class="flex space-x-4">
                     <a href="index.html" class="hover:text-blue-400 transition">Home</a>
                     <a href="techstack.html" class="hover:text-blue-400 transition">Tech Stack</a>
                     <a href="projects.html" class="text-blue-400 font-semibold border-b-2 border-blue-400 pb-1">Projects</a>
@@ -33,8 +33,8 @@
                 <button class="filter-btn active px-4 py-2 rounded-full bg-blue-600 text-white" data-filter="all">Semua</button>
                 <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="web">Web</button>
                 <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="game">Game</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="mobile">Mobile</button>
                 <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="desktop">Desktop</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="other">Other</button>
             </div>
 
             <!-- Projects Grid -->
@@ -84,6 +84,24 @@
                 repoLink: null
             },
             {
+                title: "Grad Gen",
+                description: "Tools untuk generate koleksi gradien yang bisa diekspor menjadi texture (PNG).",
+                image: "grad-gen.png",
+                category: "other",
+                techIcons: ["godot"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/grad-gen"
+            },
+            {
+                title: "Bajaj Bercerita",
+                description: "Game yang menceritakan bagian kecil kehidupan seorang supir bajaj. Game ini juga memenangkan juara 1 IGW Game Jam 2025",
+                image: "bajaj-bercerita.png",
+                category: "game",
+                techIcons: ["godot", "aseprite"],
+                projectLink: "https://riizlaah.itch.io/bajaj-bercerita",
+                repoLink: "https://github.com/riizlaah/bajaj-bercerita"
+            },
+            {
                 title: "Masked Work",
                 description: "Game tentang cerita seorang budak di perusahaan gelap.",
                 image: "masked-work.png",
@@ -116,8 +134,53 @@
                 image: "ngetik-aja-dulu.png",
                 category: "web",
                 techIcons: ["js"],
-                projectLink: "https://github.com/riizlaah/ngetik-aja-dulu",
-                repoLink: "https://ngetik-aja-dulu.pages.dev/"
+                projectLink: "https://ngetik-aja-dulu.pages.dev/",
+                repoLink: "https://github.com/riizlaah/ngetik-aja-dulu" 
+            },
+            {
+                title: "Esemka Laundry",
+                description: "Laundry Management System.",
+                image: "esemka-laundry.png",
+                category: "desktop",
+                techIcons: ["c-sharp", "dotnet", "database", "android"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/esemka-laundry"
+            },
+            {
+                title: "Mandheg Parking System",
+                description: "Parking Management System.",
+                image: "mandheg-parking-system.png",
+                category: "desktop",
+                techIcons: ["c-sharp", "dotnet", "database"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/MandhegParkingSystem"
+            },
+            {
+                title: "Hov Sedhep",
+                description: "Restaurant Management System.",
+                image: "hovsedhep.png",
+                category: "desktop",
+                techIcons: ["c-sharp", "dotnet", "database"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/hovsedhep"
+            },
+            {
+                title: "Esemka Jati Hotel",
+                description: "Hotel Management System.",
+                image: "esemka-jati-hotel.png",
+                category: "desktop",
+                techIcons: ["c-sharp", "dotnet", "database", "android"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/esemka-jati-hotel"
+            },
+            {
+                title: "Smart Park Lite",
+                description: "Another Simple Parking System.",
+                image: "smartpark-lite.png",
+                category: "desktop",
+                techIcons: ["c-sharp", "dotnet", "database", "android"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/smartpark-lite"
             },
         ];
 
