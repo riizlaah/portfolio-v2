@@ -4,44 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Portfolio Saya</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+    <script src="feather.min.js"></script>
 </head>
 <body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-    <!-- Navbar -->
-    <nav class="bg-gray-800/50 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Portfolio</a>
-                <div class="flex space-x-4">
-                    <a href="index.html" class="hover:text-blue-400 transition">Home</a>
-                    <a href="techstack.html" class="hover:text-blue-400 transition">Tech Stack</a>
-                    <a href="projects.html" class="text-blue-400 font-semibold border-b-2 border-blue-400 pb-1">Projects</a>
-                </div>
-            </div>
+    <nav class="bg-gray-800 sticky top-0 z-50 border-b border-gray-700">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+        <a href="index.html" class="text-3xl font-bold text-blue-400">Portfolio</a>
+        <div class="flex space-x-2 md:space-x-6">
+          <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+          <a href="techstack.html" class="hover:text-blue-400 transition">Tech Stack</a>
+          <a href="projects.html" class="font-semibold border-b-2 border-blue-400 pb-1 text-blue-400">Projects</a>
         </div>
+        </div>
+      </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
-        <div class="max-w-7xl mx-auto">
-            <h1 class="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">My Projects</h1>
-            <p class="text-center text-gray-400 mb-12 text-lg">Kumpulan project yang telah saya kerjakan</p>
-
-            <!-- Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-3 mb-10">
-                <button class="filter-btn active px-4 py-2 rounded-full bg-blue-600 text-white" data-filter="all">Semua</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="web">Web</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="game">Game</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="desktop">Desktop</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="other">Other</button>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsContainer">
-                <!-- Projects akan diisi oleh JavaScript -->
-            </div>
+      <div class="max-w-7xl mx-auto">
+        <h1 class="text-4xl font-bold text-center mb-4 text-blue-500">My Projects</h1>
+        <p class="text-center text-gray-400 mb-12 text-lg">Kumpulan project yang telah saya kerjakan</p>
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+          <button class="filter-btn active px-4 py-2 rounded-full bg-blue-600 text-white" data-filter="all">Semua</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="web">Web</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="game">Game</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="desktop">Desktop</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="other">Other</button>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsContainer">
+          <!-- ... -->
+        </div>
+      </div>
     </main>
 
     <script>
@@ -76,7 +70,7 @@
             },
             {
                 title: "Infiroad",
-                description: "Game racing 2d tanpa garis finish dengan gaya pixel.",
+                description: "Game racing 2d tanpa garis finish (procedural generated road) dengan gaya pixel.",
                 image: "infiroad.png",
                 category: "game",
                 techIcons: ["godot", "aseprite"],
@@ -166,7 +160,7 @@
             },
             {
                 title: "Esemka Jati Hotel",
-                description: "Hotel Management System.",
+                description: "Hotel Management System yang cukup kompleks.",
                 image: "esemka-jati-hotel.png",
                 category: "desktop",
                 techIcons: ["c-sharp", "dotnet", "database", "android"],
@@ -178,7 +172,7 @@
                 description: "Another Simple Parking System.",
                 image: "smartpark-lite.png",
                 category: "desktop",
-                techIcons: ["c-sharp", "dotnet", "database", "android"],
+                techIcons: ["c-sharp", "dotnet", "android"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/smartpark-lite"
             },
@@ -192,49 +186,48 @@
             
             filteredProjects.forEach(project => {
                 const card = `
-                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-blue-400/50 transition-all group">
-                        <div class="relative overflow-hidden">
-                            <img src="assets/thumbnails/${project.image}" alt="${project.title}" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
-                            <div class="absolute top-3 right-3 bg-gray-900/80 px-3 py-1 rounded-full text-xs font-semibold">
-                                ${project.category.charAt(0).toUpperCase() + project.category.slice(1)}
-                            </div>
-                        </div>
-                        
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">${project.title}</h3>
-                            <p class="text-gray-400 mb-4 text-sm leading-relaxed">${project.description}</p>
-                            
-                            <!-- Tech Icons -->
-                            <div class="flex flex-wrap gap-3 mb-4">
-                                ${project.techIcons.map(icon => 
-                                    `<img src="assets/icons/${icon}.png" class="h-6" />`
-                                ).join('')}
-                            </div>
-                            
-                            <!-- Buttons -->
-                            <div class="flex gap-3">
-                                ${project.projectLink ? 
-                                    `<a href="${project.projectLink}" target="_blank" class="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-semibold text-center transition flex items-center justify-center gap-2">
-                                        <i class="fas fa-external-link-alt"></i> Demo
-                                    </a>` : 
-                                    `<button disabled class="flex-1 px-4 py-2 bg-gray-700 rounded-lg text-sm font-semibold text-gray-400 cursor-not-allowed flex items-center justify-center gap-2">
-                                        <i class="fas fa-external-link-alt"></i> No Demo
-                                    </button>`
-                                }
-                                ${project.repoLink ? 
-                                    `<a href="${project.repoLink}" target="_blank" class="flex-1 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-semibold text-center transition flex items-center justify-center gap-2">
-                                        <i class="fab fa-github"></i> Repo
-                                    </a>` : 
-                                    `<button disabled class="flex-1 px-4 py-2 bg-gray-700 rounded-lg text-sm font-semibold text-gray-400 cursor-not-allowed flex items-center justify-center gap-2">
-                                        <i class="fab fa-github"></i> No Repo
-                                    </button>`
-                                }
-                            </div>
+                  <div class="bg-gray-800/50 flex flex-col rounded-xl border border-gray-700 hover:border-blue-400/50 transition-all group">
+                    <div class="relative overflow-hidden rounded-t-xl">
+                        <img src="assets/thumbnails/${project.image}" alt="${project.title}" class="w-full h-48 object-cover group-hover:scale-110 duration-300">
+                        <div class="absolute top-3 right-3 bg-gray-900/80 px-3 py-1 rounded-full text-xs font-semibold capitalize group-hover:bg-blue-700 duration-300">
+                            ${project.category}
                         </div>
                     </div>
+                    
+                    <div class="p-6 flex flex-col justify-between grow gap-5">
+                      <div>
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">${project.title}</h3>
+                        <p class="text-gray-400 mb-4 text-sm leading-relaxed">${project.description}</p>
+                        <div class="flex flex-wrap gap-3">
+                          ${project.techIcons.map(icon => 
+                              `<img src="assets/icons/${icon}.png" class="h-6" />`
+                          ).join('')}
+                        </div>
+                      </div>
+                      <div class="flex gap-3">
+                        ${project.projectLink ? 
+                          `<a href="${project.projectLink}" target="_blank" class="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-semibold text-center transition flex items-center justify-center gap-2">
+                            <i data-feather="external-link" witdh="18" height="18"></i>Demo
+                          </a>` : 
+                          `<button disabled class="flex-1 px-4 py-2 bg-gray-700 rounded-lg text-sm font-semibold text-gray-400 cursor-not-allowed flex items-center justify-center gap-2">
+                            <i data-feather="slash" witdh="18" height="18"></i>Demo
+                          </button>`
+                        }
+                        ${project.repoLink ? 
+                          `<a href="${project.repoLink}" target="_blank" class="flex-1 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-semibold text-center transition flex items-center justify-center gap-2">
+                            <i data-feather="code" witdh="18" height="18"></i>Repo
+                          </a>` : 
+                          `<button disabled class="flex-1 px-4 py-2 bg-gray-700 rounded-lg text-sm font-semibold text-gray-400 cursor-not-allowed flex items-center justify-center gap-2">
+                            <i data-feather="slash" witdh="18" height="18"></i>Repo
+                          </button>`
+                        }
+                      </div>
+                    </div>
+                  </div>
                 `;
                 
                 container.innerHTML += card;
+                feather.replace()
             });
         }
 
@@ -244,9 +237,9 @@
                 // Update active button
                 document.querySelectorAll('.filter-btn').forEach(b => {
                     b.classList.remove('active', 'bg-blue-600', 'text-white');
-                    b.classList.add('bg-gray-700');
+                    b.classList.add('bg-gray-700', 'hover:bg-gray-600');
                 });
-                btn.classList.remove('bg-gray-700');
+                btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
                 btn.classList.add('active', 'bg-blue-600', 'text-white');
                 
                 // Filter projects
@@ -258,11 +251,5 @@
         // Initial render
         document.addEventListener('DOMContentLoaded', () => renderProjects('all'));
     </script>
-
-    <style>
-        .filter-btn.active {
-            @apply bg-blue-600 text-white;
-        }
-    </style>
 </body>
 </html>
