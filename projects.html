@@ -30,6 +30,8 @@
           <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="web">Web</button>
           <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="game">Game</button>
           <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="desktop">Desktop</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="android">Android</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="web-api">Web API</button>
           <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="other">Other</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsContainer">
@@ -45,7 +47,7 @@
                 title: "Hekerd",
                 description: "Web untuk blogging dan kuis sederhana.",
                 image: "hekerd.png",
-                category: "web",
+                category: ["web"],
                 techIcons: ["php", "laravel", "js", "database"],
                 projectLink: "https://hekerd.eu.org",
                 repoLink: null
@@ -54,7 +56,7 @@
                 title: "Loquas",
                 description: "Game shooter yang unik dengan fitur yang cukup banyak.",
                 image: "loquas.png",
-                category: "game",
+                category: ["game"],
                 techIcons: ["godot", "blender", "gimp", "audacity"],
                 projectLink: "https://riizlaah.itch.io/loquas",
                 repoLink: null
@@ -63,7 +65,7 @@
                 title: "Kuarkers",
                 description: "Game absurd tanpa tujuan dan hampir open world.",
                 image: "kuarkers.png",
-                category: "game",
+                category: ["game"],
                 techIcons: ["godot", "blender", "gimp", "audacity"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/kuarkers-g"
@@ -72,7 +74,7 @@
                 title: "Infiroad",
                 description: "Game racing 2d tanpa garis finish (procedural generated road) dengan gaya pixel.",
                 image: "infiroad.png",
-                category: "game",
+                category: ["game"],
                 techIcons: ["godot", "aseprite"],
                 projectLink: "https://riizlaah.itch.io/infiroad",
                 repoLink: null
@@ -81,7 +83,7 @@
                 title: "Grad Gen",
                 description: "Tools untuk generate koleksi gradien yang bisa diekspor menjadi texture (PNG).",
                 image: "grad-gen.png",
-                category: "other",
+                category: ["other"],
                 techIcons: ["godot"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/grad-gen"
@@ -90,7 +92,7 @@
                 title: "Bajaj Bercerita",
                 description: "Game yang menceritakan bagian kecil kehidupan seorang supir bajaj. Game ini juga memenangkan juara 1 IGW Game Jam 2025",
                 image: "bajaj-bercerita.png",
-                category: "game",
+                category: ["game"],
                 techIcons: ["godot", "aseprite"],
                 projectLink: "https://riizlaah.itch.io/bajaj-bercerita",
                 repoLink: "https://github.com/riizlaah/bajaj-bercerita"
@@ -99,7 +101,7 @@
                 title: "Masked Work",
                 description: "Game tentang cerita seorang budak di perusahaan gelap.",
                 image: "masked-work.png",
-                category: "game",
+                category: ["game"],
                 techIcons: ["godot", "aseprite"],
                 projectLink: "https://riizlaah.itch.io/masked-work",
                 repoLink: "https://github.com/riizlaah/masked-work"
@@ -108,7 +110,7 @@
                 title: "MonggoDB",
                 description: "Database berbasis file-file JSON, plesetan dari MongoDB.",
                 image: "monggodb.png",
-                category: "other",
+                category: ["other"],
                 techIcons: ["python"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/monggodb"
@@ -117,7 +119,7 @@
                 title: "Bank Sederhana",
                 description: "Aplikasi Bank Sederhana dengan tampilan CLI.",
                 image: "bank-sederhana.png",
-                category: "other",
+                category: ["other"],
                 techIcons: ["python"],
                 projectLink: "https://gist.github.com/riizlaah/dc1d6c0547038cce3f787df02f4ce721",
                 repoLink: null
@@ -126,7 +128,7 @@
                 title: "Ngetik Aja Dulu",
                 description: "Aplikasi (game) kecil untuk melatih kecepatan mengetik.",
                 image: "ngetik-aja-dulu.png",
-                category: "web",
+                category: ["web"],
                 techIcons: ["js"],
                 projectLink: "https://ngetik-aja-dulu.pages.dev/",
                 repoLink: "https://github.com/riizlaah/ngetik-aja-dulu" 
@@ -135,8 +137,8 @@
                 title: "Esemka Laundry",
                 description: "Laundry Management System.",
                 image: "esemka-laundry.png",
-                category: "desktop",
-                techIcons: ["c-sharp", "dotnet", "database", "android"],
+                category: ["desktop", "android"],
+                techIcons: ["c-sharp", "dotnet", "database", "android", "kotlin", "jetpack-compose"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/esemka-laundry"
             },
@@ -144,7 +146,7 @@
                 title: "Mandheg Parking System",
                 description: "Parking Management System.",
                 image: "mandheg-parking-system.png",
-                category: "desktop",
+                category: ["desktop"],
                 techIcons: ["c-sharp", "dotnet", "database"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/MandhegParkingSystem"
@@ -153,7 +155,7 @@
                 title: "Hov Sedhep",
                 description: "Restaurant Management System.",
                 image: "hovsedhep.png",
-                category: "desktop",
+                category: ["desktop"],
                 techIcons: ["c-sharp", "dotnet", "database"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/hovsedhep"
@@ -162,8 +164,8 @@
                 title: "Esemka Jati Hotel",
                 description: "Hotel Management System yang cukup kompleks.",
                 image: "esemka-jati-hotel.png",
-                category: "desktop",
-                techIcons: ["c-sharp", "dotnet", "database", "android"],
+                category: ["desktop", "android"],
+                techIcons: ["c-sharp", "dotnet", "database", "android", "kotlin", "jetpack-compose"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/esemka-jati-hotel"
             },
@@ -171,10 +173,55 @@
                 title: "Smart Park Lite",
                 description: "Another Simple Parking System.",
                 image: "smartpark-lite.png",
-                category: "desktop",
-                techIcons: ["c-sharp", "dotnet", "android"],
+                category: ["desktop", "android"],
+                techIcons: ["c-sharp", "dotnet", "android", "kotlin", "jetpack-compose"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/smartpark-lite"
+            },
+            {
+                title: "Papier",
+                description: "E-Shop Android App.",
+                image: "papier.png",
+                category: ["android"],
+                techIcons: ["android", "kotlin", "jetpack-compose"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/papier"
+            },
+            {
+                title: "Esemka Sport",
+                description: "Android App untuk melihat detail tim & player dari game MOBA terkenal.",
+                image: "esemka-sport.png",
+                category: ["android"],
+                techIcons: ["android", "kotlin", "jetpack-compose"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/esemka-sport"
+            },
+            {
+                title: "Ezemkofi",
+                description: "Android App untuk melihat/mencari menu kopi serta memesannya.",
+                image: "ezemkofi.png",
+                category: ["android"],
+                techIcons: ["android", "kotlin", "jetpack-compose"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/ezemkofi"
+            },
+            {
+                title: "GrowthSeekerAcademy API",
+                description: "REST API untuk platform online courses.",
+                image: "gsa-api-swagger.png",
+                category: ["web-api"],
+                techIcons: ["c-sharp", "dotnet", "database"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/esemka-sport"
+            },
+            {
+                title: "EcoTrack",
+                description: "Sistem Informasi penjualan sampah daur ulang dengan versi Desktop, REST API, dan Android",
+                image: "ecotrack.png",
+                category: ["desktop", "android", "web-api"],
+                techIcons: ["c-sharp", "dotnet", "database", "android", "kotlin", "jetpack-compose"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/ecotrack"
             },
         ];
 
@@ -182,7 +229,7 @@
             const container = document.getElementById('projectsContainer');
             container.innerHTML = '';
             
-            const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+            const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category.includes(filter));
             
             filteredProjects.forEach(project => {
                 const card = `
@@ -190,7 +237,7 @@
                     <div class="relative overflow-hidden rounded-t-xl">
                         <img src="assets/thumbnails/${project.image}" alt="${project.title}" class="w-full h-48 object-cover group-hover:scale-110 duration-300">
                         <div class="absolute top-3 right-3 bg-gray-900/80 px-3 py-1 rounded-full text-xs font-semibold capitalize group-hover:bg-blue-700 duration-300">
-                            ${project.category}
+                            ${filter === 'all' ? project.category[0] : filter}
                         </div>
                     </div>
                     
