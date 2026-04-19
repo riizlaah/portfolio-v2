@@ -24,14 +24,18 @@
     <main class="container mx-auto px-4 py-12">
       <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl font-bold text-center mb-4 text-blue-500">My Projects</h1>
-        <p class="text-center text-gray-400 mb-12 text-lg">Kumpulan project yang telah saya kerjakan</p>
+        <p class="text-center text-gray-400 text-lg my-2" id="p1">Kumpulan project yang telah saya kerjakan</p>
+        <div class="text-6xl font-bold text-center my-4 text-blue-400 mb-6 text-shadow-lg text-shadow-sky-600" id="counter">
+          0
+        </div>
         <div class="flex flex-wrap justify-center gap-3 mb-10">
           <button class="filter-btn active px-4 py-2 rounded-full bg-blue-600 text-white" data-filter="all">Semua</button>
           <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="web">Web</button>
           <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="game">Game</button>
           <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="desktop">Desktop</button>
           <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="android">Android</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="web-api">Web API</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="web API">Web API</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="software design">Software Design</button>
           <button class="filter-btn px-4 py-2 rounded-full bg-gray-700 hover:bg-gray-600 transition" data-filter="other">Other</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsContainer">
@@ -135,7 +139,7 @@
             },
             {
                 title: "Esemka Laundry",
-                description: "Laundry Management System.",
+                description: "Sistem Informasi untuk manajemen Laundry.",
                 image: "esemka-laundry.png",
                 category: ["desktop", "android"],
                 techIcons: ["c-sharp", "dotnet", "database", "android", "kotlin", "jetpack-compose"],
@@ -144,7 +148,7 @@
             },
             {
                 title: "Mandheg Parking System",
-                description: "Parking Management System.",
+                description: "Desktop App untuk manajemen tempat parkir.",
                 image: "mandheg-parking-system.png",
                 category: ["desktop"],
                 techIcons: ["c-sharp", "dotnet", "database"],
@@ -153,7 +157,7 @@
             },
             {
                 title: "Hov Sedhep",
-                description: "Restaurant Management System.",
+                description: "Desktop App untuk manajemen restoran.",
                 image: "hovsedhep.png",
                 category: ["desktop"],
                 techIcons: ["c-sharp", "dotnet", "database"],
@@ -162,7 +166,7 @@
             },
             {
                 title: "Esemka Jati Hotel",
-                description: "Hotel Management System yang cukup kompleks.",
+                description: "Sistem Informasi untuk manajemen hotel.",
                 image: "esemka-jati-hotel.png",
                 category: ["desktop", "android"],
                 techIcons: ["c-sharp", "dotnet", "database", "android", "kotlin", "jetpack-compose"],
@@ -171,7 +175,7 @@
             },
             {
                 title: "Smart Park Lite",
-                description: "Another Simple Parking System.",
+                description: "SIstem Informasi untuk manajemen tempat parkir yang lebih simpel.",
                 image: "smartpark-lite.png",
                 category: ["desktop", "android"],
                 techIcons: ["c-sharp", "dotnet", "android", "kotlin", "jetpack-compose"],
@@ -180,7 +184,7 @@
             },
             {
                 title: "Papier",
-                description: "E-Shop Android App.",
+                description: "Android App untuk online shop.",
                 image: "papier.png",
                 category: ["android"],
                 techIcons: ["android", "kotlin", "jetpack-compose"],
@@ -188,7 +192,7 @@
                 repoLink: "https://github.com/riizlaah/papier"
             },
             {
-                title: "Esemka Sport",
+                title: "Esemka E-Sport Android",
                 description: "Android App untuk melihat detail tim & player dari game MOBA terkenal.",
                 image: "esemka-sport.png",
                 category: ["android"],
@@ -207,9 +211,9 @@
             },
             {
                 title: "GrowthSeekerAcademy API",
-                description: "REST API untuk platform online courses.",
+                description: "REST API untuk platform kursus online.",
                 image: "gsa-api-swagger.png",
-                category: ["web-api"],
+                category: ["web API"],
                 techIcons: ["c-sharp", "dotnet", "database"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/gsa-api"
@@ -218,18 +222,98 @@
                 title: "EcoTrack",
                 description: "Sistem Informasi penjualan sampah daur ulang dengan versi Desktop, REST API, dan Android",
                 image: "ecotrack.png",
-                category: ["desktop", "android", "web-api"],
+                category: ["desktop", "android", "web API"],
                 techIcons: ["c-sharp", "dotnet", "database", "android", "kotlin", "jetpack-compose"],
                 projectLink: null,
                 repoLink: "https://github.com/riizlaah/ecotrack"
+            },
+            {
+                title: "Gawean",
+                description: "Android App untuk mencari dan melamar pekerjaan",
+                image: "gawean.png",
+                category: ["android"],
+                techIcons: ["android", "kotlin", "jetpack-compose"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/gawean"
+            },
+            {
+                title: "ParkSentry",
+                description: "Software Design untuk melacak dan memantau pelanggaran di tempat parkir",
+                image: "parksentry.png",
+                category: ["software design"],
+                techIcons: [],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/ParkSentry"
+            },
+            {
+                title: "Esemka Corporation",
+                description: "App Desktop untuk administrasi perusahaan (mutasi & promosi)",
+                image: "esemka-corp.png",
+                category: ["desktop"],
+                techIcons: ["c-sharp", "dotnet", "database"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/esemka-corporation"
+            },
+            {
+                title: "Esemka E-Sport Desktop",
+                description: "App Desktop untuk melihat detail pertandingan serta memesan tiketnya",
+                image: "esemka-esport-desktop.png",
+                category: ["desktop"],
+                techIcons: ["c-sharp", "dotnet", "database"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/esemka-esport-desktop"
+            },
+            {
+                title: "Society Vaccinations",
+                description: "REST API untuk vaksinasi",
+                image: "socvacc.png",
+                category: ["web API"],
+                techIcons: ["c-sharp", "dotnet", "database"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/SocietyVaccinations"
+            },
+            {
+                title: "Tokyo Olympic 2020",
+                description: "App Android untuk melihat pertandingan dan negara di Tokyo Olympic 2020",
+                image: "tokyo-olympic-2020.png",
+                category: ["android"],
+                techIcons: ["android", "kotlin", "jetpack-compose"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/tokyo-olympic"
+            },
+            {
+                title: "MediTrack",
+                description: "Sistem Informasi pengelolaan inventaris medis dengan versi Desktop, REST API, dan Android",
+                image: "ecotrack.png",
+                category: ["desktop", "android", "web API"],
+                techIcons: ["c-sharp", "dotnet", "database", "android", "kotlin", "jetpack-compose"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/MediTrack"
+            },
+            {
+                title: "OurWater",
+                description: "Sistem Informasi PDAM untuk menghitung biaya tagihan pengguna serta memantau konsumsi/produksi debit air",
+                image: "ourwater.png",
+                category: ["desktop", "android", "web-API", "software design"],
+                techIcons: ["c-sharp", "dotnet", "database", "android", "kotlin", "jetpack-compose"],
+                projectLink: null,
+                repoLink: "https://github.com/riizlaah/OurWater"
             },
         ];
 
         function renderProjects(filter = 'all') {
             const container = document.getElementById('projectsContainer');
+            const counter = document.getElementById('counter');
             container.innerHTML = '';
+            counter.innerHTML = '0';
             
             const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category.includes(filter));
+
+            setTimeout(() => {incrementCounter(filteredProjects.length)}, 500);
+            
+
+            // if(filter != 'all') p1.innerText = `Kumpulan ${filter} project yang telah saya kerjakan`;
+            // else p1.innerText = "Kumpulan project yang telah saya kerjakan";
             
             filteredProjects.forEach(project => {
                 const card = `
@@ -276,6 +360,22 @@
                 container.innerHTML += card;
                 feather.replace()
             });
+        }
+
+        function incrementCounter(to) {
+          const counter = document.getElementById('counter');
+          let startNum = 0;
+          let duration = to <= 6 ? 250 : 1000;
+          const stepTime = Math.max(Math.floor(duration / to), 1);
+
+          const timer = setInterval(() => {
+            startNum++;
+            counter.innerText = `${startNum}`;
+            if(startNum >= to) {
+              clearInterval(timer);
+              counter.innerText = `${to}`;
+            }
+          }, stepTime)
         }
 
         // Filter functionality
