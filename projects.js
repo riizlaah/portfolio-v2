@@ -90,6 +90,15 @@ export const projects = [
         repoLink: "https://github.com/riizlaah/ngetik-aja-dulu" 
     },
     {
+        title: "Mitsu-in",
+        description: "Website untuk mengelola anggota suatu LPK.",
+        image: "mitsu-in.png",
+        category: ["web"],
+        techIcons: ["php", "laravel", "js", "database"],
+        projectLink: null,
+        repoLink: "https://github.com/starvann/mitsu-in" 
+    },
+    {
         title: "Esemka Laundry",
         description: "Sistem Informasi untuk manajemen Laundry.",
         image: "esemka-laundry.png",
@@ -127,7 +136,7 @@ export const projects = [
     },
     {
         title: "Smart Park Lite",
-        description: "SIstem Informasi untuk manajemen tempat parkir yang lebih simpel.",
+        description: "Sistem Informasi untuk manajemen tempat parkir yang lebih simpel.",
         image: "smartpark-lite.png",
         category: ["desktop", "android"],
         techIcons: ["c-sharp", "dotnet", "android", "kotlin", "jetpack-compose"],
@@ -277,5 +286,14 @@ export const projects = [
         techIcons: [],
         projectLink: null,
         repoLink: "https://github.com/riizlaah/green-signal"
+    },
+    {
+        title: "MediConnect",
+        description: "Sistem klinik yang cukup komprehensif dengan 4 role utama (administrator, resepsionis, dokter, dan pasien).",
+        image: "mediconnect.png",
+        category: ["software design", "desktop", "android", "REST API"],
+        techIcons: ["c-sharp", "dotnet", "database", "android", "kotlin", "jetpack-compose"],
+        projectLink: null,
+        repoLink: "https://github.com/riizlaah/mediconnect"
     },
 ];
