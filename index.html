@@ -1,94 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Portfolio</title>
+  <title>Naf'an Rizkilah — Katalog Kerja</title>
+  <meta name="description" content="Portofolio Naf'an Rizkilah: 33 proyek web, game, desktop, Android, dan REST API. Sejak 2022.">
+  <meta name="author" content="Naf'an Rizkilah">
+  <meta name="theme-color" content="#EEF0E8">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="output.css">
-  <script src="feather.min.js"></script>
 </head>
-<body class="bg-gray-900 text-white">
-  <nav class="bg-gray-800 sticky top-0 z-50 border-b border-gray-700">
-    <div class="container mx-auto px-4 py-4">
-      <div class="flex justify-between items-center">
-        <a href="index.html" class="text-3xl font-bold text-blue-400">Portfolio</a>
-        <div class="flex space-x-2 md:space-x-6">
-          <a href="index.html" class="text-blue-400 font-semibold border-b-2 border-blue-400 pb-1">Home</a>
-          <a href="techstack.html" class="hover:text-blue-400 transition">Tech Stack</a>
-          <a href="projects.html" class="hover:text-blue-400 transition">Projects</a>
-        </div>
-      </div>
+<body data-page="home">
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Beranda Naf'an Rizkilah">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span>Naf'an Rizkilah</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="index.html" data-nav="home">Beranda</a>
+        <a href="projects.html" data-nav="projects">Karya</a>
+        <a href="techstack.html" data-nav="tech">Tools</a>
+        <a href="print.html" data-nav="print" class="nav-pdf">
+          PDF
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#print"></use></svg>
+        </a>
+      </nav>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#menu"></use></svg>
+      </button>
     </div>
-  </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="shell mobile-nav" aria-label="Navigasi seluler">
+        <a href="index.html" data-nav="home">Beranda</a>
+        <a href="projects.html" data-nav="projects">Karya</a>
+        <a href="techstack.html" data-nav="tech">Tools</a>
+        <a href="print.html" data-nav="print">Portofolio PDF</a>
+      </nav>
+    </div>
+  </header>
 
-  <main class="container mx-auto px-4 py-12">
-    <div class="max-w-5xl mx-auto">
-      <div class="bg-gray-800/50 shadow-lg shadow-gray-700 hover:shadow-xl duration-500 rounded-2xl p-8">
-        <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
-
-          <div class="w-64 h-64 rounded-2xl overflow-hidden border-4 border-blue-400/30 shadow-2xl">
-            <img src="assets/me.jpg" alt="Profile Photo" class="w-full h-full object-cover">
-          </div>
-
-          <div class="flex-1">
-            <h1 class="text-4xl font-bold mb-2 text-blue-500">Naf'an Rizkilah</h1>
-            <p class="text-xl text-gray-300 mb-4">Full Stack Developer & Game Developer</p>
-            <div class="space-y-4 text-gray-300">
-              <p class="leading-relaxed">
-                Saya adalah seorang pengembang perangkat lunak dengan pengalaman lebih dari 3 tahun dalam pengembangan web dan game. Akhir-akhir ini juga mempelajari desktop, android serta REST API development. 
-                Memiliki passion dalam menciptakan solusi teknologi yang inovatif dan user-friendly. 
-                Saat ini fokus pada pengembangan menggunakan .NET dan Jetpack Compose.
-              </p>
-              <p class="leading-relaxed">
-                Saya percaya bahwa teknologi harus dapat diakses oleh semua orang dan terus belajar untuk mengikuti perkembangan terbaru di dunia programming. Dengan latar belakang yang kuat dalam berbagai bahasa pemrograman, saya selalu siap menghadapi tantangan baru.
-              </p>
-            </div>
-
-            <div class="mt-6">
-              <h2 class="text-2xl font-semibold mb-4 text-blue-400">Kontak Saya</h2>
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg">
-                  <i data-feather="mail" class="text-blue-400"></i>
-                  <span>nafan.rizkilah@gmail.com</span>
-                </div>
-                <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg">
-                  <i data-feather="phone" class="text-blue-400"></i>
-                  <span>+62 813 3197 6307</span>
-                </div>
-                <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg">
-                  <i data-feather="github" class="text-blue-400"></i>
-                  <a href="https://github.com/riizlaah" class="hover:text-blue-400 transition">github.com/riizlaah</a>
-                </div>
-                <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg">
-                  <i data-feather="facebook" class="text-blue-400"></i>
-                  <a href="https://web.facebook.com/nafan.rizkilah" class="hover:text-blue-400 transition">facebook.com/nafan.rizkilah</a>
-                </div>
-                <div class="flex items-center space-x-3 bg-gray-700/50 p-3 rounded-lg lg:col-span-2">
-                  <i data-feather="instagram" class="text-blue-400"></i>
-                  <a href="https://www.instagram.com/nafanrizkilah/" class="hover:text-blue-400 transition">instagram.com/nafanrizkilah</a>
-                </div>
-              </div>
-            </div>
-          </div>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker hero-kicker">Naf'an Rizkilah — pengembang perangkat lunak</p>
+        <h1 class="display" id="hero-title">
+          <span class="display-a">Sistem untuk keseharian.</span>
+          <span class="display-b">Dunia untuk dimainkan.</span>
+        </h1>
+        <p class="lede hero-lede">Sejak 2022 saya membangun aplikasi web, game, desktop, Android, dan REST API. Sebagian besar untuk pekerjaan yang harus selesai dan dipakai orang.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="projects.html">
+            Lihat <span data-count="projects">33</span> karya
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-right"></use></svg>
+          </a>
+          <a class="btn btn-outline" href="print.html">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#print"></use></svg>
+            Portofolio PDF
+          </a>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          <div class="bg-gray-800/50 shadow-lg shadow-gray-700 hover:shadow-xl duration-500 rounded-xl p-6 flex flex-col items-center">
-            <i data-feather="code" class="text-blue-400" width="48" height="48"></i>
-            <h3 class="text-2xl font-bold">3+</h3>
-            <p class="text-gray-400">Tahun Pengalaman</p>
-          </div>
-          <div class="bg-gray-800/50 shadow-lg shadow-gray-700 hover:shadow-xl duration-500 rounded-xl p-6 flex flex-col items-center">
-            <i data-feather="git-pull-request" class="text-blue-400" width="48" height="48"></i>
-            <h3 class="text-2xl font-bold">20+</h3>
-            <p class="text-gray-400">Project Selesai</p>
-          </div>
+      <div class="hero-sheet" aria-label="Cuplikan karya pilihan">
+        <a class="sheet-tile sheet-tile--wide" href="projects.html#bajaj-bercerita">
+          <img src="assets/thumbs/bajaj-bercerita.webp" alt="Cuplikan game Bajaj Bercerita" width="900" height="450" decoding="async">
+          <span class="sheet-tile-award">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#award"></use></svg>
+            Juara 1 IGW Game Jam 2025
+          </span>
+          <span class="sheet-tile-label">Bajaj Bercerita <small>Game</small></span>
+        </a>
+        <a class="sheet-tile" href="projects.html#ecotrack">
+          <img src="assets/thumbs/ecotrack.webp" alt="Cuplikan sistem EcoTrack" width="900" height="506" loading="lazy" decoding="async">
+          <span class="sheet-tile-label">EcoTrack <small>Desktop, Android, API</small></span>
+        </a>
+        <a class="sheet-tile" href="projects.html#hekerd">
+          <img src="assets/thumbs/hekerd.webp" alt="Cuplikan web Hekerd" width="900" height="506" loading="lazy" decoding="async">
+          <span class="sheet-tile-label">Hekerd <small>Web</small></span>
+        </a>
       </div>
-    </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="featured-title">
+      <div class="section-head">
+        <h2 class="section-title" id="featured-title">Karya pilihan</h2>
+        <a class="text-link" href="projects.html">
+          Semua karya
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arrow-right"></use></svg>
+        </a>
+      </div>
+      <div class="featured-list" id="featured-list">
+        <noscript><p class="lede">Aktifkan JavaScript untuk melihat daftar karya pilihan, atau buka halaman <a href="projects.html">Karya</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="about-title">
+      <div class="about-grid">
+        <figure class="about-photo">
+          <img
+            src="assets/opt/me-1200.jpg"
+            srcset="assets/opt/me-600.jpg 600w, assets/opt/me-1200.jpg 1200w"
+            sizes="(min-width: 900px) 360px, 100vw"
+            width="1200" height="1203"
+            alt="Potret Naf'an Rizkilah"
+            loading="lazy"
+            decoding="async">
+          <figcaption>Naf'an Rizkilah, Indonesia.</figcaption>
+        </figure>
+        <div class="about-copy">
+          <h2 class="section-title" id="about-title">Tentang saya</h2>
+          <p>Saya Naf'an Rizkilah, pengembang perangkat lunak asal Indonesia. Sejak 2022 saya membangun aplikasi web, game, aplikasi desktop, aplikasi Android, dan REST API.</p>
+          <p>Sebagian besar pekerjaan saya berangkat dari masalah operasional sehari-hari: manajemen laundry, parkir, restoran, klinik, hotel, sampai tagihan air PDAM. Di sisi lain, saya juga membuat game dan aset visualnya.</p>
+          <p>Fokus saya saat ini adalah .NET dan Jetpack Compose. Saya senang membuat sistem yang rapi di belakang layar dan antarmuka yang jelas dipakai orang.</p>
+
+          <dl class="fact-list">
+            <div>
+              <dt>Sejak</dt>
+              <dd>2022</dd>
+            </div>
+            <div>
+              <dt>Proyek</dt>
+              <dd><span data-count="projects">33</span></dd>
+            </div>
+            <div>
+              <dt>Tool</dt>
+              <dd><span data-count="tools">16</span></dd>
+            </div>
+            <div>
+              <dt>Penghargaan</dt>
+              <dd>Medal of Excellence — LKS Nasional 2026</dd>
+            </div>
+          </dl>
+
+          <div class="mt-6 flex flex-wrap items-center gap-2">
+            <span class="kicker">Fokus saat ini</span>
+            <span class="tag">.NET</span>
+            <span class="tag">Jetpack Compose</span>
+            <span class="tag">REST API</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="achievements-title">
+      <div class="section-head achievements-head">
+        <div>
+          <h2 class="section-title" id="achievements-title">Pencapaian</h2>
+          <p class="achievements-lede">Empat catatan dari kompetisi dan kursus, disusun dari yang terbaru.</p>
+        </div>
+      </div>
+      <div class="achievement-years" id="achievement-years">
+        <noscript><p class="lede">Aktifkan JavaScript untuk melihat pencapaian, atau buka bagian Pencapaian pada <a href="print.html">portofolio PDF</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="contact-band" aria-labelledby="contact-title">
+      <div class="shell contact-grid">
+        <div>
+          <p class="kicker">Kontak</p>
+          <h2 class="contact-title" id="contact-title">Untuk pertanyaan atau kerja sama, hubungi saya.</h2>
+          <a class="contact-email" href="mailto:nafan.rizkilah@gmail.com">nafan.rizkilah@gmail.com</a>
+        </div>
+        <div class="contact-meta">
+          <a class="contact-link" href="tel:+6281331976307">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg>
+            +62 813 3197 6307
+          </a>
+          <a class="contact-link" href="https://github.com/riizlaah" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#github"></use></svg>
+            github.com/riizlaah
+          </a>
+          <a class="contact-link" href="https://www.instagram.com/nafanrizkilah/" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#instagram"></use></svg>
+            instagram.com/nafanrizkilah
+          </a>
+          <a class="contact-link" href="https://web.facebook.com/nafan.rizkilah" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#facebook"></use></svg>
+            facebook.com/nafan.rizkilah
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
-  <script>  
-    feather.replace()
-  </script>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-heading">Kontak</p>
+        <div class="footer-list">
+          <a href="mailto:nafan.rizkilah@gmail.com">nafan.rizkilah@gmail.com</a>
+          <a href="tel:+6281331976307">+62 813 3197 6307</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-heading">Tautan</p>
+        <div class="footer-list">
+          <a href="projects.html">Karya</a>
+          <a href="techstack.html">Tools</a>
+          <a href="print.html">Portofolio PDF</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-note">Katalog kerja Naf'an Rizkilah. Dibuat dengan Tailwind CSS, data proyek dan pengalaman diperbarui secara berkala.</p>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <span>© <span data-year>2026</span> Naf'an Rizkilah</span>
+      <span>Katalog kerja 2022—<span data-year>2026</span></span>
+    </div>
+  </footer>
+
+  <script type="module" src="site.js"></script>
+  <script type="module" src="home-page.js"></script>
 </body>
 </html>

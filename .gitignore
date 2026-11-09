@@ -1,0 +1,5 @@
+# Sertifikat asli berisi nomor sensitif; hanya pratinjau WebP yang dipublikasikan.
+assets/certs/*.pdf
+
+# Artefak pratinjau lokal
+.playwright-mcp/
