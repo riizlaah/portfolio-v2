@@ -2237,7 +2237,7 @@
   }
 
   .print-feature-title {
-    margin-top: 7mm;
+    margin-bottom: 7mm;
     font-size: 25pt;
     line-height: 0.98;
     letter-spacing: -0.035em;

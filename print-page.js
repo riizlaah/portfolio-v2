@@ -333,10 +333,10 @@ function featureHtml(item, position) {
   return `
     ${printHeader(`Karya pilihan ${position + 1} dari ${featured.length}`)}
     <div class="print-content print-feature">
+      <h1 class="print-feature-title">${esc(project.title)}</h1>
       <div class="print-feature-image">
         <img src="${esc(project.full)}" alt="Cuplikan ${esc(project.title)}"${isGame ? ' style="image-rendering:pixelated"' : ""}>
       </div>
-      <h1 class="print-feature-title">${esc(project.title)}</h1>
       <div class="print-feature-meta">
         ${meta.map((value) => `<span class="print-tag">${esc(value)}</span>`).join("")}
       </div>
